@@ -21,12 +21,19 @@ resource "aws_db_instance" "default" {
   publicly_accessible     = true
 
   tags = {
-    Name           = "${local.resource_prefix.value}-rds"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "27468d61-9195-42a4-8b80-f3e27e1e2836"
+    Name                 = "${local.resource_prefix.value}-rds"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "27468d61-9195-42a4-8b80-f3e27e1e2836"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 
   # Ignore password changes from tf plan diff
@@ -42,12 +49,19 @@ resource "aws_db_option_group" "default" {
   option_group_description = "Terraform OG"
 
   tags = {
-    Name           = "${local.resource_prefix.value}-og"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "37f1bef0-ecb9-4f81-8e0c-67491bd5a70c"
+    Name                 = "${local.resource_prefix.value}-og"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "37f1bef0-ecb9-4f81-8e0c-67491bd5a70c"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -69,12 +83,19 @@ resource "aws_db_parameter_group" "default" {
   }
 
   tags = {
-    Name           = "${local.resource_prefix.value}-pg"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "c4901ea1-6941-43a5-afc5-f0a7d3cd31a7"
+    Name                 = "${local.resource_prefix.value}-pg"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "c4901ea1-6941-43a5-afc5-f0a7d3cd31a7"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -84,12 +105,19 @@ resource "aws_db_subnet_group" "default" {
   description = "Terraform DB Subnet Group"
 
   tags = {
-    Name           = "sg-${local.resource_prefix.value}"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "81528144-2fcd-4d5a-8ca1-2541411fe756"
+    Name                 = "sg-${local.resource_prefix.value}"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "81528144-2fcd-4d5a-8ca1-2541411fe756"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -98,12 +126,19 @@ resource "aws_security_group" "default" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name           = "${local.resource_prefix.value}-rds-sg"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "c2e1a85b-b36f-4cbf-9850-e85217031a21"
+    Name                 = "${local.resource_prefix.value}-rds-sg"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "c2e1a85b-b36f-4cbf-9850-e85217031a21"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -131,10 +166,17 @@ resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
   tags = {
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "3f79a481-47a1-42a4-afec-93063c325a12"
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "3f79a481-47a1-42a4-afec-93063c325a12"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -159,12 +201,19 @@ resource "aws_iam_role" "ec2role" {
 EOF
 
   tags = {
-    Name           = "${local.resource_prefix.value}-role"
-    Environment    = local.resource_prefix.value
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "edc1288e-a81f-4a80-ba1b-269f83faacf2"
+    Name                 = "${local.resource_prefix.value}-role"
+    Environment          = local.resource_prefix.value
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "edc1288e-a81f-4a80-ba1b-269f83faacf2"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
@@ -364,11 +413,18 @@ sudo chown root:root /var/www/html/index.php
 
 EOF
   tags = {
-    Name           = "${local.resource_prefix.value}-dbapp"
-    cost_center    = "thirdparty"
-    env            = "main"
-    team_ownership = "sre"
-    yor_trace      = "6472361c-8771-4b22-af8c-5bd1d5041946"
+    Name                 = "${local.resource_prefix.value}-dbapp"
+    cost_center          = "thirdparty"
+    env                  = "main"
+    team_ownership       = "sre"
+    yor_trace            = "6472361c-8771-4b22-af8c-5bd1d5041946"
+    git_commit           = "cf2bf62e8ae2b1debd5b99a457eef53b1914d3ab"
+    git_file             = "terraform/aws/db-app.tf"
+    git_last_modified_at = "2021-06-15 08:19:53"
+    git_last_modified_by = "schosterbarak@gmail.com"
+    git_modifiers        = "schosterbarak"
+    git_org              = "schosterbarak"
+    git_repo             = "yor-demo"
   }
 }
 
