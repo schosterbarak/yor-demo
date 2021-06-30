@@ -17,5 +17,6 @@ resource "aws_db_instance" "default" {
     git_org              = "schosterbarak"
     git_repo             = "yor-demo"
     yor_trace            = "1ebc3ee8-a006-4578-90d7-bec9e5d69d9b"
+    team_ownership       = "application_engineering"
   }
 }
