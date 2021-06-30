@@ -19,7 +19,7 @@ jobs:
       - name: Run yor action
         uses: bridgecrewio/yor-action@main
         with:
-          config_file: yor_config.yaml
+          config_file: tag_groups.yaml
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master
