@@ -1,4 +1,5 @@
 metadata:
+  id: "CKV_OWNERSHIP_1"
   name: "RDS instances should only be managed by Application Engineering team" 
   guidelines: "Please reach out to application_engineering@acme.com" 
   category: "general" 
