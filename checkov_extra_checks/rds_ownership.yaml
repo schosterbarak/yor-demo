@@ -1,0 +1,14 @@
+metadata:
+  name: "RDS instances should only be managed by Application Engineering team" 
+  guidelines: "Please reach out to application_engineering@acme.com" 
+  category: "general" 
+  severity: "info" 
+scope:
+  provider: "aws" 
+definition: 
+    cond_type: "attribute"
+    resource_types:
+    - "aws_db_instance"
+    attribute: "tags.team_ownership"
+    operator: "equals"
+    value: "application"
