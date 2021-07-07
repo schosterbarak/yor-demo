@@ -19,10 +19,12 @@ tag_groups:
                   git_modifiers: # platform engineering team member's github handles
                     - milkana
                     - nofar
+                    - schosterbarak
             - application:
                 tags:
                   git_modifiers:
-                    - schosterbarak
+                    - steve
+                    - matt 
   - name: cost # map infrastructure cost center
     tags:
       - name: cost_center
